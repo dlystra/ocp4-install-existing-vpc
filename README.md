@@ -30,7 +30,7 @@ Example Playbook
 ----------------
 
 This creates a cluster with variables defined in vars/main.yml. It also provides a vars prompt to allow the user to paste in their pull secret.
-
+```
 - name: Deploy Cluster
   hosts: localhost
   gather_facts: no
@@ -41,11 +41,11 @@ This creates a cluster with variables defined in vars/main.yml. It also provides
       prompt: OpenShift Pull Secret
       private: no
   roles:
-    - openshift-iac-day-1
-
+    - openshift-install-existing-vpc
+```
 
 This destroys a cluster with variables defined in var/main.yml
-
+```
 - name: destroy infra
   hosts: localhost
   gather_facts: no
@@ -54,7 +54,8 @@ This destroys a cluster with variables defined in var/main.yml
   vars_files:
     - vars/main.yml
   roles:
-    - openshift-iac-day-1
+    - openshift-install-existing-vpc
+```
         
 License
 -------
