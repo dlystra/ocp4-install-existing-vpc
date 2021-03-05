@@ -1,4 +1,4 @@
-openshift-iac-day-1
+openshift-install-existing-vpc
 =========
 
 This role creates and destroys OpenShift 4 clusters in an existing AWS VPC.
