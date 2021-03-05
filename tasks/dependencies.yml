@@ -1,0 +1,10 @@
+---
+- name: "unarchive:openshift-client-linux.tar.gz | Download OCP Client & Install Binaries: {{ openshift.release }}"
+  unarchive:
+    src: "{{ openshift.release_url }}/{{ openshift.release }}/{{ item }}-linux.tar.gz"
+    dest: "{{ home_dir }}"
+    remote_src: yes
+    mode: 0775
+  with_items:
+    - openshift-client
+    - openshift-install

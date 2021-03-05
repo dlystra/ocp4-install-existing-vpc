@@ -1,0 +1,24 @@
+---
+- name: Download Dependencies
+  include_tasks: dependencies.yml
+  when: not destroy
+
+- name: Gather Facts
+  include_tasks: gather_facts.yml
+  when: not destroy
+
+- name: Create SSH key
+  include_tasks: ssh_key.yml
+  when: not destroy
+
+- name: Create Install Config
+  include_tasks: create_install_config.yml
+  when: not destroy
+
+- name: Create OpenShift Cluster
+  include_tasks: create_cluster.yml
+  when: not destroy
+
+- name: Destroy OpenShift Cluster
+  include_tasks: destroy_cluster.yml
+  when: destroy

@@ -1,0 +1,9 @@
+---
+- name: Generate Deployment Keys
+  openssh_keypair:
+    path: "{{ home_dir }}/.ssh/id_rsa_{{ cluster_name }}"
+    comment: "core@ocp.kubeadmin"
+  register: ssh_facts
+
+- set_fact:
+    ssh_key: "{{ lookup('file', '{{ ssh_facts.filename }}.pub') }}"

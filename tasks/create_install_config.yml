@@ -1,0 +1,10 @@
+---
+- name: Create OCP Install Directory
+  file:
+    path: "{{ install_dir }}"
+    state: directory
+  
+- name: Create Install Config
+  template:
+    src: install-config.yaml.j2
+    dest: "{{ install_dir }}/install-config.yaml"
