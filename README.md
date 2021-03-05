@@ -41,7 +41,7 @@ This creates a cluster with variables defined in vars/main.yml. It also provides
       prompt: OpenShift Pull Secret
       private: no
   roles:
-    - openshift-install-existing-vpc
+    - ocp4-install-existing-vpc
 ```
 
 This destroys a cluster with variables defined in var/main.yml
@@ -54,7 +54,7 @@ This destroys a cluster with variables defined in var/main.yml
   vars_files:
     - vars/main.yml
   roles:
-    - openshift-install-existing-vpc
+    - ocp4-install-existing-vpc
 ```
         
 License
