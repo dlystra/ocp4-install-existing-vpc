@@ -46,7 +46,7 @@ This creates a cluster with variables defined in vars/main.yml. It also provides
 
 This destroys a cluster with variables defined in var/main.yml
 ```
-- name: destroy infra
+- name: Destroy Cluster
   hosts: localhost
   gather_facts: no
   vars:
