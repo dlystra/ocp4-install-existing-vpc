@@ -1,3 +1,0 @@
----
-- name: Destroy OCP Cluster
-  script: openshift-install.sh {{ install_dir }} destroy
